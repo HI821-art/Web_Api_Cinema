@@ -6,6 +6,10 @@ using Web_Api_Cinema.Helpers;
 using Web_Api_Cinema.Interfaces;
 using Web_Api_Cinema.Services;
 using Web_Api_Cinema.Extensions;
+using AutoMapper;
+using FluentValidation;
+using FluentValidation.AspNetCore;
+using Web_Api_Cinema.Validators;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -24,6 +28,8 @@ builder.Services.AddControllersWithViews();
 
 builder.Services.Configure<MailJetSettings>(builder.Configuration.GetSection("MailJet"));
 builder.Services.AddScoped<IEmailSender, MailJetEmailSender>();
+builder.Services.AddDbContext<MovieDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("SomeDb")));
 
 builder.Services.AddDbContext<MovieDbContext>(opts =>
     opts.UseSqlServer(connStr));
@@ -35,6 +41,9 @@ builder.Services.AddIdentity<User, IdentityRole>(options =>
 
 builder.Services.AddScoped<FavoritesServiceOptimized>();
 builder.Services.AddScoped<FavoritesServiceDb>();
+builder.Services.AddAutoMapper(typeof(Program));
+builder.Services.AddValidatorsFromAssemblyContaining<CreateMovieDtoValidator>();
+
 builder.Services.AddScoped<FavoritesServiceLocal>();
 builder.Services.AddScoped<ISeatService, SeatService>();
 
@@ -63,7 +72,7 @@ builder.Services.AddRazorPages();
 
 var app = builder.Build();
 
-// Add Swagger middleware
+
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
