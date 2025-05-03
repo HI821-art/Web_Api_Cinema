@@ -1,9 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35931.197 d17.13
+VisualStudioVersion = 17.13.35931.197
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web_Api_Cinema", "Web_Api_Cinema.csproj", "{39C48134-CE88-4849-84EE-C83CAE0E3D4C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "..\ClassLibrary1\Core.csproj", "{1BB9945D-1D89-4419-B651-2A65893F005B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "..\DataAccess\DataAccess.csproj", "{78A6A25A-7800-4035-9C14-F52C27E09BDC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{39C48134-CE88-4849-84EE-C83CAE0E3D4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{39C48134-CE88-4849-84EE-C83CAE0E3D4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{39C48134-CE88-4849-84EE-C83CAE0E3D4C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1BB9945D-1D89-4419-B651-2A65893F005B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BB9945D-1D89-4419-B651-2A65893F005B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BB9945D-1D89-4419-B651-2A65893F005B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BB9945D-1D89-4419-B651-2A65893F005B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78A6A25A-7800-4035-9C14-F52C27E09BDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78A6A25A-7800-4035-9C14-F52C27E09BDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78A6A25A-7800-4035-9C14-F52C27E09BDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78A6A25A-7800-4035-9C14-F52C27E09BDC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
