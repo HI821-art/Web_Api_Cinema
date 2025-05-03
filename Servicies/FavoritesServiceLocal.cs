@@ -1,10 +1,8 @@
-﻿using Microsoft.AspNetCore.Http;
-using Web_Api_Cinema.Data;
-using Web_Api_Cinema.Entities;
-using Web_Api_Cinema.Extensions;
-using Web_Api_Cinema.Interfaces;
-using Microsoft.EntityFrameworkCore;
-using System.Security.Claims;
+﻿using Data;
+using Data.Entities;
+using Core.Extensions;
+using Core.Interfaces;
+
 
 namespace Web_Api_Cinema.Services;
 

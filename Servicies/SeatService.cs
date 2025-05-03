@@ -1,6 +1,8 @@
-﻿using Web_Api_Cinema.Entities;
+﻿using Microsoft.AspNetCore.Identity.UI.Services;
+using Data;
+using Core.Interfaces;
+using Data.Entities;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.AspNetCore.Identity.UI.Services;
 
 public class SeatService : ISeatService
 {

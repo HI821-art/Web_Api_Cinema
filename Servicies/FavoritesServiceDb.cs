@@ -1,10 +1,10 @@
 ﻿using System.Security.Claims;
-using Web_Api_Cinema.Entities;
-using Web_Api_Cinema.Interfaces;
+using Data;
+using Data.Entities;
+using Core.Interfaces;
 using Microsoft.EntityFrameworkCore;
-using Web_Api_Cinema.Data;
 
-namespace Web_Api_Cinema.Services
+namespace Core.Services
 {
     public class FavoritesServiceDb : IFavoriteService
     {

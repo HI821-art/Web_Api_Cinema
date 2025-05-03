@@ -1,11 +1,11 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using AutoMapper;
+using Core.DTOs;
+using Core.Dtos;
+using Data;
+using Data.Entities;
+using FluentValidation;
+using FluentValidation.Results;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using Web_Api_Cinema.Data;
-using Web_Api_Cinema.DTOs;
-using Web_Api_Cinema.Entities;
-using AutoMapper;
-using Web_Api_Cinema.Dtos;
 
 namespace Web_Api_Cinema.Controllers
 {
@@ -52,7 +52,7 @@ namespace Web_Api_Cinema.Controllers
         }
       
         [HttpPost]
-        public IActionResult Create([FromBody] CreateMovieDto dto)
+        public IActionResult Create([FromBody] Core.DTOs.CreateMovieDto dto)
         {
             _logger.LogInformation("Creating a new movie: {Title}", dto.Title);
 

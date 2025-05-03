@@ -1,15 +1,16 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
-using Microsoft.EntityFrameworkCore;
-using Web_Api_Cinema.Data;
-using Web_Api_Cinema.Helpers;
-using Web_Api_Cinema.Interfaces;
+using Core.Extensions;
+using Data.Entities;
+using Data;
 using Web_Api_Cinema.Services;
-using Web_Api_Cinema.Extensions;
-using AutoMapper;
+using Core.Services;
+using Core.Helpers;
 using FluentValidation;
-using FluentValidation.AspNetCore;
-using Web_Api_Cinema.Validators;
+using Microsoft.EntityFrameworkCore;
+using Core.Interfaces;
+using Core.Validators;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
